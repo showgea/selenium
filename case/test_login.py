@@ -15,7 +15,7 @@ class TestLogin(unittest.TestCase):
         """
         测试登录成功
         """
-        self.driver.input_account("weifuwu")
+        self.driver.input_account("zuhu0410")
         self.driver.input_password("Ctp#8899")
         code = self.driver.get_check_code()
         self.driver.input_code(code)
@@ -41,7 +41,7 @@ class TestLogin(unittest.TestCase):
         """
         测试登录失败：密码错误
         """
-        self.driver.input_account("weifuwu")
+        self.driver.input_account("zuhu0410")
         self.driver.input_password("Ctp#88991")
         code = self.driver.get_check_code()
         self.driver.input_code(code)
@@ -67,7 +67,7 @@ class TestLogin(unittest.TestCase):
         """
         测试登录失败：密码为空
         """
-        self.driver.input_account("weifuwu")
+        self.driver.input_account("zuhu0410")
         self.driver.input_password("")
         code = self.driver.get_check_code()
         self.driver.input_code(code)
@@ -80,7 +80,7 @@ class TestLogin(unittest.TestCase):
         """
         测试登录失败：验证码为空
         """
-        self.driver.input_account("weifuwu")
+        self.driver.input_account("zuhu0410")
         self.driver.input_password("Ctp#8899")
         self.driver.input_code("")
         self.driver.click_login_btn()
@@ -92,7 +92,7 @@ class TestLogin(unittest.TestCase):
         """
         测试登录失败：验证码错误
         """
-        self.driver.input_account("weifuwu")
+        self.driver.input_account("zuhu0410")
         self.driver.input_password("Ctp#8899")
         self.driver.input_code(code="test")
         self.driver.click_login_btn()

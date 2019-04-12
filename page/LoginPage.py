@@ -1,7 +1,8 @@
 from common.base import BasePage
 
 
-login_url = 'http://10.10.3.112/web/login.html'
+# login_url = 'http://10.10.3.112/web/login.html'
+login_url = 'http://10.10.3.78:30303/login.html'
 
 
 class LoginPage(BasePage):
@@ -17,7 +18,7 @@ class LoginPage(BasePage):
         check_code_loc = ('xpath', '//*[@id="checkCode"]/span')
         remember_me_loc = ('id', 'rememberMe')
         log_in_loc = ('id', 'btn-login')
-        success_loc = ('xpath', '//a[text()="微服务治理1"]')
+        success_loc = ('xpath', '//a[text()="租户0410"]')
         failure_wrong_account = ('xpath', '//*[text()="账号或密码错误"]')
         failure_wrong_password = ('xpath', '//*[text()="账号或密码错误"]')
         failure_empty_account = ('xpath', '//*[text()="账号和密码不为空"]')
@@ -73,7 +74,7 @@ class LoginPage(BasePage):
             登录成功后返回 True
             :return: True
             """
-            return self.is_text_in_element(self.success_loc, "微服务治理1")
+            return self.is_text_in_element(self.success_loc, "租户0410")
 
         def is_login_failure_account(self):
             """
