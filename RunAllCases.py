@@ -5,7 +5,8 @@ from HTMLTestRunner_cn import HTMLTestRunner
 
 case_path = os.path.dirname(os.path.realpath(__file__))
 current_date = time.strftime("%Y-%m-%d", time.localtime())
-report_name = 'report-' + current_date + '.html'
+# report_name = 'report-' + current_date + '.html'
+report_name = 'report' + '.html'
 report_path = os.path.dirname(os.path.realpath(__file__)) + '\\result\\' + report_name
 
 
